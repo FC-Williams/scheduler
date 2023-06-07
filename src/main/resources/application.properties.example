@@ -1,0 +1,8 @@
+
+spring.datasource.url=jdbc:postgresql://YOU_URL:DB_PORT/YOUR_DB
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+spring.datasource.driver-class-name=YOUR_DRIVER_CLASSNAME
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+logging.level.org.springframework.transaction=DEBUG
