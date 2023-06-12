@@ -26,11 +26,6 @@ public class StatusController {
     @Autowired
     private StatusService statusService;
     
-    @GetMapping("/hola")
-    public ResponseEntity<String> getAllUsers() {
-        return ResponseEntity.ok("hola mundssso");
-    }
-
     @GetMapping
     public ResponseEntity<List<Status>> findAll(){
         return  ResponseEntity.ok(statusService.findAll());
