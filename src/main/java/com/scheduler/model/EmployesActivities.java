@@ -16,8 +16,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "EMPLOYES_ACTIVITIES", schema = "SCHEDULE")
 public class EmployesActivities {
+    @Id
     private Long employId;
 
+    @Id
     private Long activityId;
 
     public Status(){}
