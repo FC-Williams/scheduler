@@ -12,11 +12,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "AREAS", schema = "SCHEDULE")
 public class Areas {
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long areaId;
 
@@ -25,7 +24,7 @@ public class Areas {
     private String username;
 
     private String area;
-    
+
     @Column(name = "CREATION_DATE", nullable = false, updatable = false)
     @CreationTimestamp
     private Date creationDate;
@@ -33,9 +32,10 @@ public class Areas {
     // @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    public Status(){}
+    public void Status() {
+    }
 
-    public Status(Long areaId, Long statusId, String username, String area , Date creationDate, Date lastUpdate) {
+    public void Status(Long areaId, Long statusId, String username, String area, Date creationDate, Date lastUpdate) {
         this.areaId = areaId;
         this.statusId = statusId;
         this.username = username;
@@ -43,7 +43,6 @@ public class Areas {
         this.creationDate = creationDate;
         this.lastUpdate = lastUpdate;
     }
-
 
     public Long getAreaId() {
         return this.areaId;

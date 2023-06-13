@@ -12,11 +12,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "EMPLOYES", schema = "SCHEDULE")
 public class Employes {
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employId;
 
@@ -38,8 +37,8 @@ public class Employes {
 
     private Date endDate;
 
-    private Sring username;
-    
+    private String username;
+
     @Column(name = "CREATION_DATE", nullable = false, updatable = false)
     @CreationTimestamp
     private Date creationDate;
@@ -47,9 +46,12 @@ public class Employes {
     // @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    public Status(){}
+    public void Status() {
+    }
 
-    public Status(Long employId, Long statusId, String curp, String rfc, String street, String colony, Long zip, String institutionalMail, String username, Date startDate, Date endDate, Date creationDate, Date lastUpdate) {
+    public void Status(Long employId, Long statusId, String curp, String rfc, String street, String colony, Long zip,
+            String institutionalMail, String username, Date startDate, Date endDate, Date creationDate,
+            Date lastUpdate) {
         this.employId = employId;
         this.statusId = statusId;
         this.curp = curp;
@@ -65,77 +67,68 @@ public class Employes {
         this.lastUpdate = lastUpdate;
     }
 
-
-    public Long getEmployId(){
+    public Long getEmployId() {
         return this.employId;
     }
 
-    public void setEmployId(Long employId){
+    public void setEmployId(Long employId) {
         this.employId = employId;
     }
 
-    public Long getStatusId(){
+    public Long getStatusId() {
         return this.statusId;
     }
 
-    public void setStatusId(Long statusId){
+    public void setStatusId(Long statusId) {
         this.statusId = statusId;
     }
 
-    public String getCurp(){
+    public String getCurp() {
         return this.curp;
     }
 
-    public void setCurp(String curp){
+    public void setCurp(String curp) {
         this.curp = curp;
     }
 
-    public String getRfc(){
+    public String getRfc() {
         return this.rfc;
     }
 
-    public void setRfc(String rfc){
+    public void setRfc(String rfc) {
         this.rfc = rfc;
     }
 
-    public String getStreet(){
+    public String getStreet() {
         return this.street;
     }
 
-    public void setStreet(String street){
+    public void setStreet(String street) {
         this.street = street;
     }
 
-    public String getColony(){
+    public String getColony() {
         return this.colony;
     }
 
-    public void setColony(String colony){
+    public void setColony(String colony) {
         this.colony = colony;
     }
 
-    public Long  getZip(){
+    public Long getZip() {
         return this.zip;
     }
 
-    public void setZip(Long zip){
+    public void setZip(Long zip) {
         this.zip = zip;
     }
 
-    public String getInstitutionalMail(){
+    public String getInstitutionalMail() {
         return this.institutionalMail;
     }
 
-    public void setInstitutionalMail(String institutionalMail){
+    public void setInstitutionalMail(String institutionalMail) {
         this.institutionalMail = institutionalMail;
-    }
-
-    public String getUsername(){
-        return this.username;
-    }
-
-    public void setUsername(String username){
-        this.username = username;
     }
 
     public Date getStartDate() {
@@ -154,11 +147,11 @@ public class Employes {
         this.endDate = endDate;
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return this.username;
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.username = username;
     }
 

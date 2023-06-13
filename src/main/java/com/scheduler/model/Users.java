@@ -12,11 +12,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "USERS", schema = "SCHEDULE")
 public class Users {
-    @Id 
+    @Id
     private String username;
 
     private Long personId;
@@ -28,7 +27,7 @@ public class Users {
     private String mail;
 
     private String su;
-    
+
     @Column(name = "CREATION_DATE", nullable = false, updatable = false)
     @CreationTimestamp
     private Date creationDate;
@@ -36,9 +35,11 @@ public class Users {
     // @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    public Status(){}
+    public void Status() {
+    }
 
-    public Status(String username, Long personId, Long statusId, String userPass, String mail, String su, Date creationDate, Date lastUpdate) {
+    public void Status(String username, Long personId, Long statusId, String userPass, String mail, String su,
+            Date creationDate, Date lastUpdate) {
         this.username = username;
         this.personId = personId;
         this.statusId = statusId;
@@ -49,7 +50,6 @@ public class Users {
         this.lastUpdate = lastUpdate;
     }
 
-
     public String getUsername() {
         return this.username;
     }
@@ -58,7 +58,7 @@ public class Users {
         this.username = username;
     }
 
-    public Int getPersonId() {
+    public Long getPersonId() {
         return this.personId;
     }
 
@@ -66,7 +66,7 @@ public class Users {
         this.personId = personId;
     }
 
-    public Int getStatusId() {
+    public Long getStatusId() {
         return this.statusId;
     }
 

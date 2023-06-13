@@ -12,11 +12,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "ACTIVITIES", schema = "SCHEDULE")
 public class Activities {
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long activityId;
 
@@ -35,7 +34,7 @@ public class Activities {
     private String username;
 
     private Long areaId;
-    
+
     @Column(name = "CREATION_DATE", nullable = false, updatable = false)
     @CreationTimestamp
     private Date creationDate;
@@ -43,22 +42,23 @@ public class Activities {
     // @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    public Status(){}
+    public void Status() {
+    }
 
-    public Status(Long activityId, Long activityTypeId, Long statusId, String activity, String description, Date startDate, Date endDate, Date creationDate, Date lastUpdate, String username, Long areaId) {
+    public void Status(Long activityId, Long activityTypeId, Long statusId, String activity, String description,
+            Date startDate, Date endDate, Date creationDate, Date lastUpdate, String username, Long areaId) {
         this.activityId = activityId;
         this.activityTypeId = activityTypeId;
         this.statusId = statusId;
         this.activity = activity;
         this.description = description;
-        this.startstartDate =startDate;
+        this.startDate = startDate;
         this.endDate = endDate;
         this.creationDate = creationDate;
         this.lastUpdate = lastUpdate;
         this.username = username;
         this.areaId = areaId;
     }
-
 
     public Long getActivityId() {
         return this.activityId;
@@ -137,19 +137,19 @@ public class Activities {
         this.lastUpdate = new Date();
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return this.username;
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public Long getAreaId(){
+    public Long getAreaId() {
         return this.areaId;
     }
 
-    public void setAreaId(Long areaId){
+    public void setAreaId(Long areaId) {
         this.areaId = areaId;
     }
 

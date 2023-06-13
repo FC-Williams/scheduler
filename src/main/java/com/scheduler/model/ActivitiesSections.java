@@ -1,5 +1,6 @@
 package com.scheduler.model;
 
+import java.sql.Time;
 import java.util.*;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -12,11 +13,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "ACTIVITIES_SECTIONS", schema = "SCHEDULE")
 public class ActivitiesSections {
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long activitySectionId;
 
@@ -35,7 +35,7 @@ public class ActivitiesSections {
     private Time endHour;
 
     private String username;
-    
+
     @Column(name = "CREATION_DATE", nullable = false, updatable = false)
     @CreationTimestamp
     private Date creationDate;
@@ -43,9 +43,11 @@ public class ActivitiesSections {
     // @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    public Status(){}
+    public void Status() {
+    }
 
-    public Status(Long activitySectionId, Long activityId, String section, String description, Date startDate, Date endDate, Time endHour, Time startHour, String username, Date creationDate, Date lastUpdate) {
+    public void Status(Long activitySectionId, Long activityId, String section, String description, Date startDate,
+            Date endDate, Time endHour, Time startHour, String username, Date creationDate, Date lastUpdate) {
         this.activitySectionId = activitySectionId;
         this.activityId = activityId;
         this.section = section;
@@ -59,61 +61,52 @@ public class ActivitiesSections {
         this.lastUpdate = lastUpdate;
     }
 
-
-    public Long getActivitiesSectionId(){
+    public Long getActivitiesSectionId() {
         return this.activitySectionId;
     }
 
-    public void setActivitiesSectionId(Long activitySectionId){
+    public void setActivitiesSectionId(Long activitySectionId) {
         this.activitySectionId = activitySectionId;
     }
 
-    public Long getActivityId(){
+    public Long getActivityId() {
         return this.activityId;
     }
 
-    public void setActivityId(Long activityId){
+    public void setActivityId(Long activityId) {
         this.activityId = activityId;
     }
 
-    public String getSection(){
+    public String getSection() {
         return this.section;
     }
 
-    public void setSection(String section){
+    public void setSection(String section) {
         this.section = section;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return this.description;
     }
 
-    public void setDescription(String description){
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public Time getStartHour(){
+    public Time getStartHour() {
         return this.startHour;
     }
 
-    public void setStartHour(Time startHour){
+    public void setStartHour(Time startHour) {
         this.startHour = startHour;
     }
 
-    public Time getEndHour(){
+    public Time getEndHour() {
         return this.endHour;
     }
 
-    public void setEndHour(Time endHour){
+    public void setEndHour(Time endHour) {
         this.endHour = endHour;
-    }
-
-    public String getUsername(){
-        return this.username;
-    }
-
-    public void setUsername(String username){
-        this.username = username;
     }
 
     public Date getStartDate() {
@@ -132,11 +125,11 @@ public class ActivitiesSections {
         this.endDate = endDate;
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return this.username;
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.username = username;
     }
 

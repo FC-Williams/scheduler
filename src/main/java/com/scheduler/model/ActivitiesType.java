@@ -12,11 +12,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "ACTIVITIES_TYPES", schema = "SCHEDULE")
-public class ActivitiesTypes {
-    @Id 
+public class ActivitiesType {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long activityTypeId;
 
@@ -27,7 +26,7 @@ public class ActivitiesTypes {
     private String description;
 
     private String username;
-    
+
     @Column(name = "CREATION_DATE", nullable = false, updatable = false)
     @CreationTimestamp
     private Date creationDate;
@@ -35,18 +34,19 @@ public class ActivitiesTypes {
     // @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    public Status(){}
+    public void Status() {
+    }
 
-    public Status(Long activityTypeId, Long statusId, String activityType, String description, String username, Date creationDate, Date lastUpdate) {
+    public void Status(Long activityTypeId, Long statusId, String activityType, String description, String username,
+            Date creationDate, Date lastUpdate) {
         this.activityTypeId = activityTypeId;
         this.statusId = statusId;
         this.activityType = activityType;
         this.description = description;
-        this.username = useActivityTypeId
+        this.username = username;
         this.creationDate = creationDate;
         this.lastUpdate = lastUpdate;
     }
-
 
     public Long getActivityTypeId() {
         return this.activityTypeId;

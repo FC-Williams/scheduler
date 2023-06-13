@@ -12,7 +12,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "EMPLOYES_ACTIVITIES", schema = "SCHEDULE")
 public class EmployesActivities {
@@ -22,13 +21,13 @@ public class EmployesActivities {
     @Id
     private Long activityId;
 
-    public Status(){}
-
-    public Status(Long employId, Long activityId) {
-        this.employId = employId;
-        this.activityId = actEmployId
+    public void Status() {
     }
 
+    public void Status(Long employId, Long activityId) {
+        this.employId = employId;
+        this.activityId = activityId;
+    }
 
     public Long getEmployId() {
         return this.employId;
